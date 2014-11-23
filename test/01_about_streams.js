@@ -57,10 +57,10 @@ test('simple return', function () {
 
 test('the last event', function () {
   var received = '';
-  var names = ['foo', 'bar'];
+  var names = ['foo', 'bar', 'baz', 3.14];
   Observable.from(names).subscribe(function (x) { received = x; });
 
-  equal('bar', received);
+  equal(3.14, received);
 });
 
 test('everything counts', function () {
