@@ -79,7 +79,7 @@ test('this is still an event stream', function () {
   numbers.onNext(10);
   numbers.onNext(5);
 
-  equal(__, received);
+  equal(10 + 5, received);
 });
 
 test('all events will be received', function () {
